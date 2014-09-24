@@ -19,5 +19,17 @@ var songData = [
     url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/06+If+Your+Girl+Only+Knew.mp3",
     title: "If Your Girl Only Knew",
     artist: "Aaliyah",
+  },
+  {
+    url: "http://media3.albinoblacksheep.com/albino_audio/Dont_Download_This_Song.mp3",
+    title: "Don't Download This Song",
+    artist: "Weird Al"
+  },
+  {
+    url: "http://media3.albinoblacksheep.com/albino_audio/0021_celtic_techno_burrito.mp3",
+    title: "Celtic Techno Burrito",
+    artist: "Wear Pants"
   }
 ];
+
+

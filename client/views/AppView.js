@@ -1,21 +1,23 @@
 // AppView.js - Defines a backbone view class for the whole music app.
-var AppView = Backbone.View.extend({
+window.MyTunes = window.MyTunes || {};
+window.MyTunes.Views = window.MyTunes.Views || {};
+
+MyTunes.Views.AppView = Backbone.View.extend({
+  className: 'container',
 
   initialize: function(params){
-    this.playerView = new PlayerView({model: this.model.get('currentSong')});
-    this.libraryView = new LibraryView({collection: this.model.get('library')});
-
-    // change:currentSong - this is Backbone's way of allowing you to filter events to
-    // ONLY receive change events for the specific property, 'currentSong'
+    this.playerView = new MyTunes.Views.PlayerView({model: this.model.get('currentSong')});
+    this.libraryView = new MyTunes.Views.LibraryView({collection: this.model.get('library')});
+    this.queueView = new MyTunes.Views.SongQueueView({collection: this.model.get('songQueue')});
     this.model.on('change:currentSong', function(model){
       this.playerView.setSong(model.get('currentSong'));
     }, this);
   },
-
   render: function(){
     return this.$el.html([
       this.playerView.$el,
-      this.libraryView.$el
+      this.libraryView.$el,
+      this.queueView.$el
     ]);
   }
 

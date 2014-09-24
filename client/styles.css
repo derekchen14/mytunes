@@ -1,0 +1,31 @@
+body{ background-color: #BEFAAA; }
+body > div {
+  width: 500px;
+  margin: 0 auto;
+}
+
+audio {
+  width: 500px;
+}
+
+th {
+  width: 300px;
+  text-align: center;
+}
+
+h4{
+  text-align: center;
+}
+
+.playcount {
+  float: right;
+}
+
+button {
+  background: transparent;
+  border: 0px;
+}
+
+.container {
+  margin: 3em auto;
+}
