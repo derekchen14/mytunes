@@ -3,10 +3,10 @@ window.MyTunes = window.MyTunes || {};
 window.MyTunes.Views = window.MyTunes.Views || {};
 
 MyTunes.Views.LibraryView = Backbone.View.extend({
-
   tagName: "table",
 
   initialize: function() {
+    this.collection.on('play', this.render, this);
     this.collection.on('upvote', this.render, this);
     this.collection.on('downvote', this.render, this);
     this.render();
